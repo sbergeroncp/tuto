@@ -1,5 +1,5 @@
 {
-    "name": "tuto_7.md",
+    "name": "Ateliers microbit",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -11,7 +11,8 @@
         "main.ts",
         "README.md",
         "tuto_6.md",
-        "tuto_7.md"
+        "tuto_7.md",
+        "tuto_8.md"
     ],
     "testFiles": [
         "test.ts"
