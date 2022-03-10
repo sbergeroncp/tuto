@@ -71,7 +71,7 @@ function neige1 () {
 
 Voici les coordonnées x,y des LEDs sur l'écran du micro:bit.
 
-Le but est d'allumer et/ou d'éteindre uniquement les LEDs aux coordonnées 0 à 3 pour x et y. 
+Le but est d'allumer et/ou d'éteindre uniquement les LEDs aux coordonnées 0 à 4 pour x et y. 
 
 Autrement dit, uniquement les LEDs à l'intérieur de la boule de neige.
 
