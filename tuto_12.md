@@ -6,11 +6,11 @@ Compose une mélodie !
 
 ## Étape 1
 
-Supprime le bloc ``||basic:toujours||``.
+Supprime les blocs ``||basic: au démarrage ||`` et ``||basic: toujours ||``.
 
 ## Étape 2
 
-Ajoute le bloc ``||music: régler le tempo à (bpm) 120 ||`` dans le bloc ``||basic: au démarrage||``.
+Ajoute le bloc ``||music: régler le tempo à (bpm) 120 ||`` dans le bloc ``||input: lorsque le bouton A est pressé||``.
 
 ```blocks
 
