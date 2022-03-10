@@ -71,16 +71,16 @@ function neige1 () {
 
 Voici les coordonnées x,y des LEDs sur l'écran du micro:bit.
 
-Le but est d'allumer et/ou d'éteindre uniquement les LEDs aux coordonnées 0 à 4 pour x et y. 
+Le but est d'allumer et/ou d'éteindre uniquement les LED aux coordonnées 0 à 4 pour x et y. 
 
-Autrement dit, uniquement les LEDs à l'intérieur de la boule de neige.
+Autrement dit, uniquement les LED à l'intérieur de la boule de neige.
 
 ![Atelier](https://pxt.azureedge.net/blob/dcab173218997aba45eb174b25cb128e3172bbb1/static/courses/csintro/coordinates/microbit-led-coords.png)
 
 
 ## Étape 5
 
-Ajoute le bloc ``||math: choisir au hasard||`` à la valeur "x" et "y" du bloc ``||led: allumer x / y||``.
+Ajoute le bloc ``||math: choisir au hasard||`` à la valeur ``||math: x||`` et ``||math: y||`` dans le bloc ``||led: allumer x / y||``.
 
 Modifie les valeurs de x (0 et 4) et de y (0 et 4).
 
@@ -109,9 +109,9 @@ function neige1 () {
 
 Ajoute le bloc ``||led: éteindre x / y||`` sous le bloc ``||basic: pause (ms) 100||``.
 
-Ajoute le bloc ``||math: choisir au hasard||`` dans la valeur "x" et "y" du bloc ``||led: éteindre x / y||``.
+Ajoute le bloc ``||math: choisir au hasard||`` dans la valeur ``||math: x||`` et ``||math: y||`` du bloc ``||led: éteindre x / y||``.
 
-Modifie les valeurs de x (0 et 4) et y (0 et 4).
+Modifie les valeurs de ``||math: x||`` (0 et 4) et ``||math: y||`` (0 et 4).
 
 ```blocks
 
