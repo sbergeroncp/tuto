@@ -129,6 +129,8 @@ Ajoute le bloc ``||loops: répéter 3 fois||`` dans le bloc ``||input: lorsque l
 
 Et ajoute le bloc ``||functions: appel neige1||`` , le bloc ``||functions: appel neige2||`` et le bloc ``||functions: appel neige3||`` dans la boucle.
 
+Regarde l'indice pour t'aider!
+
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
