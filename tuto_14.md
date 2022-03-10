@@ -13,7 +13,7 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 Crée trois nouvelles fonctions à l'aide du bloc ``||functions: Créer une fonction||``.
 
-Nomme les fonctions : neige1, neige2 et neige3.
+Nomme les fonctions : ``||functions: neige1||``, ``||functions: neige2||`` et ``||functions: neige3||``.
 
 ```blocks
 
