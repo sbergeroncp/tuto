@@ -82,7 +82,7 @@ Autrement dit, uniquement les LED à l'intérieur de la boule de neige.
 
 Ajoute le bloc ``||math: choisir au hasard||`` à la valeur ``||math: x||`` et ``||math: y||`` dans le bloc ``||led: allumer x / y||``.
 
-Modifie les valeurs de x (0 et 4) et de y (0 et 4).
+Modifie les valeurs de ``||math: x||`` (0 et 4) et de ``||math: y||`` (0 et 4).
 
 ```blocks
 
