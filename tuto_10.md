@@ -12,7 +12,7 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Main||``.
 
-Ajoute le bloc ``||variables: définir Nombre à "0"||`` dans le bloc ``||input: lorsque secouer||``.
+Ajoute le bloc ``||variables: définir Main à "0"||`` dans le bloc ``||input: lorsque secouer||``.
 
 ```blocks
 
@@ -92,7 +92,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 7
 
-Ajoute le bloc ``||basic: montrer l'icône||`` sous le bloc ``||logic: si Main = 1||``.
+Ajoute le bloc ``||basic: montrer l'icône||`` sous le bloc ``||logic: si alors ||``.
 
 Ajoute le bloc ``||basic: pause (ms) 2000||`` sous le bloc ``||basic: montrer l'icône||``.
 
@@ -102,7 +102,6 @@ Ajoute le bloc ``||basic: effacer l'écran||`` sous le bloc ``||basic: pause (ms
 
 let Main = 0
 input.onGesture(Gesture.Shake, function () {
-    basic.pause(1000)
     Main = randint(1, 3)
     if (Main == 1) {
         basic.showIcon(IconNames.Scissors)
