@@ -25,7 +25,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 3
 
-Remplace la valeur ``||variables: 0||`` dans le bloc ``||variables: définir Main à||`` par le bloc ``||math: choisir au hasard de "0" à "10"||``.
+Remplace la valeur ``||variables: 0||`` dans le bloc ``||variables: définir Main ||`` par le bloc ``||math: choisir au hasard de "0" à "10"||``.
 
 Remplace les valeurs ``||math: 0||`` et ``||math: 10||`` dans le bloc ``||math: choisir au hasard de "0" à "10"||`` par les valeurs ``||math: 1||`` et ``||math: 3||``.
 
@@ -40,7 +40,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 4
 
-Ajoute le bloc ``||logic: si vrai alors||`` sous le bloc ``||variables: définir Main à||``.
+Ajoute le bloc ``||logic: si vrai alors||`` sous le bloc ``||variables: définir Main ||``.
 
 ```blocks
 

@@ -10,7 +10,7 @@ Supprime le bloc ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Crée une ``||variables: variable||`` et donne lui le nom ``||variables:lumiere||``. (sans accent sur le "è")
+Crée une ``||variables: variable||`` et donne lui le nom ``||variables:Lumiere||``. (sans accent sur le "è")
 
 Ajoute le bloc ``||variables: définir Lumiere à "0"||`` dans le bloc ``||basic: toujours||``.
 
@@ -25,7 +25,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir luminosité à "0"||`` par le bloc ``||input: niveau d'intensité lumineuse||``. 
+Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Lumiere ||`` par le bloc ``||input: niveau d'intensité lumineuse||``. 
 
 
 ```blocks
