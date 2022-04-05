@@ -25,7 +25,7 @@ basic.forever(function () {
 
 ## Étape 3
 
-Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Temperature à||`` par le bloc ``||input: température||``. 
+Remplace la valeur ``||variables: 0||`` du bloc ``||variables: définir Temperature||`` par le bloc ``||input: température||``. 
 
 ```blocks
 
