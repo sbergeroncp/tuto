@@ -1,6 +1,6 @@
 # ElecFreaks micro:bit Smart Home Kit
 
-# Tutoriel 8
+# Tutoriel 9
 
 ## @showdialog
 
@@ -150,7 +150,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 5
+## Étape 7
 
 Ajoute le bloc ``||logic:si vrai alors sinon||`` sous le bloc ``||variables: définir Lumen ||``.
 
@@ -176,11 +176,11 @@ basic.forever(function () {
 
 ```
 
-## Étape 6
+## Étape 8
 
 Modifie le bloc ``||logic:si vrai alors sinon||``.
 
-Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic: et||``.
+Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic: ou||``.
 
 ```package
 
@@ -195,7 +195,7 @@ let Lumen = 0
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (false && false) {
+    if (false || false) {
     	
     } else {
     	
@@ -203,11 +203,12 @@ basic.forever(function () {
 })
 
 
+
 ```
 
-## Étape 7
+## Étape 9
 
-Modifie le bloc ``||logic: et||``.
+Modifie le bloc ``||logic: ou||``.
 
 Remplace l'espace de gauche par le bloc ``||logic:0 > 0||``.
 
@@ -228,7 +229,7 @@ let Lumen = 0
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && false) {
+    if (Celsius > 25 || false) {
     	
     } else {
     	
@@ -237,7 +238,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 8
+## Étape 10
 
 Modifie le bloc ``||logic: et||``.
 
@@ -260,7 +261,7 @@ let Lumen = 0
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
     	
     } else {
     	
@@ -269,7 +270,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 9
+## Étape 11
 
 Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` dans le bloc ``||logic:si alors||``.
 
@@ -295,7 +296,7 @@ let strip: neopixel.Strip = null
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
     } else {
     	
@@ -304,11 +305,11 @@ basic.forever(function () {
 
 ```
 
-## Étape 10
+## Étape 12
 
 Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||``.
 
-Remplace la valeur ``||neopixel:  rouge ||`` par la valeur ``||neopixel:  noir ||``.
+Remplace la valeur ``||neopixel:  rouge ||`` par une valeur ``||neopixel:  noir ||``.
 
 ```package
 
@@ -324,7 +325,7 @@ let strip: neopixel.Strip = null
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
     } else {
@@ -335,11 +336,13 @@ basic.forever(function () {
 
 ```
 
-## Étape 11
+## Étape 13
 
 Ajoute le bloc ``||music:  jouer tonalité||`` sous le bloc ``||neopixel:  régler couleur||``.
 
-Les valeurs ``||music:  Middle C||``, ``||music:  1 temps||`` et ``||music:  jusqu'à la fin||`` demeurent les mêmes.
+Remplace la valeur ``||music:  Middle C||`` par une note de ton choix.
+
+Les valeurs ``||music:  1 temps||`` et ``||music:  jusqu'à la fin||`` demeurent les mêmes.
 
 
 ```package
@@ -356,7 +359,7 @@ let strip: neopixel.Strip = null
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
@@ -367,7 +370,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 12
+## Étape 14
 
 Ajoute le bloc ``||variables:  définir strip ||`` (trad. : bande lumineuse) de l'onglet ``||neopixel:  neopixel ||`` dans le bloc ``||logic:sinon||``.
 
@@ -393,7 +396,7 @@ let strip: neopixel.Strip = null
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
@@ -405,11 +408,11 @@ basic.forever(function () {
 
 ```
 
-## Étape 13
+## Étape 15
 
 Ajoute le bloc ``||neopixel:  régler couleur||`` sous le bloc ``||variables:  définir strip ||``.
 
-Remplace la valeur ``||neopixel:  rouge ||`` par la valeur ``||neopixel:  blanc ||``.
+Remplace la valeur ``||neopixel:  rouge ||`` par la valeur ``||neopixel:  jaune ||``.
 
 ```package
 
@@ -425,19 +428,19 @@ let strip: neopixel.Strip = null
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && Lumen < 50) {
+    if (Celsius > 25 || Lumen < 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     } else {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
     }
 })
 
 ```
 
-## Étape 14
+## Étape 16
 
 Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
@@ -455,7 +458,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 15
+## Étape 17
 
 Ajoute le bloc ``||OLED: show string ||`` (trad. : montrer la ligne) sous le bloc ``||OLED: clear OLED ||`` (trad. : effacer écran).
 
@@ -482,13 +485,27 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 16
+## Étape 18
 
-Ajoute le bloc ``||OLED: show string ||`` (trad. : montrer la ligne) sous le bloc ``||OLED: show number ||`` (trad. : montrer le nombre).
+Ajoute le bloc ``||OLED: clear OLED ||`` (trad. : effacer l'écran) dans le bloc ``||input:lorsque le bouton B est pressé||``.
 
-Remplace la valeur ``||OLED: " " ||`` par le mot ``||OLED:Lumen||``. 
+```package
 
-Ajoute le bloc ``||OLED: show number ||`` (trad. : montrer le nombre) sous le bloc ``||OLED: show string ||``.
+dstemps=github:tinkertanker/pxt-smarthome
+
+```
+
+```blocks
+
+input.onButtonPressed(Button.B, function () {
+    OLED.clear()
+})
+
+```
+
+## Étape 19
+
+Ajoute le bloc ``||OLED: draw loading bar ||`` (trad. : dessiner une ligne de progression) sous le bloc ``||OLED: clear OLED ||`` (trad. : effacer écran).
 
 Remplace la valeur ``||OLED: 0 ||`` par le bloc ``||variables:Lumen||``.
 
@@ -500,18 +517,15 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
+input.onButtonPressed(Button.B, function () {
     let Lumen = 0
-    let Celsius = 0
     OLED.clear()
-    OLED.writeStringNewLine("Celsius")
-    OLED.writeNumNewLine(Celsius)
-    OLED.writeStringNewLine("Lumen")
-    OLED.writeNumNewLine(Lumen)
+    OLED.drawLoading(Lumen)
+})
 
 ```
 
-## Étape 17
+## Étape 20
 
 Voici la programmation complète du programme.
 
@@ -525,10 +539,11 @@ dstemps=github:tinkertanker/pxt-smarthome
 
 input.onButtonPressed(Button.A, function () {
     OLED.clear()
-    OLED.writeStringNewLine("Celsius")
     OLED.writeNumNewLine(Celsius)
-    OLED.writeStringNewLine("Lumen")
-    OLED.writeNumNewLine(Lumen)
+})
+input.onButtonPressed(Button.B, function () {
+    OLED.clear()
+    OLED.drawLoading(Lumen)
 })
 let strip: neopixel.Strip = null
 let Lumen = 0
@@ -538,13 +553,13 @@ OLED.init(128, 64)
 basic.forever(function () {
     Celsius = smarthome.ReadTemperature(TMP36Type.TMP36_temperature_C, AnalogPin.P2)
     Lumen = smarthome.ReadLightIntensity(AnalogPin.P3)
-    if (Celsius > 25 && Lumen < 50) {
+    if (Celsius < 25 || Lumen > 50) {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
         strip.showColor(neopixel.colors(NeoPixelColors.Black))
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     } else {
         strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-        strip.showColor(neopixel.colors(NeoPixelColors.Violet))
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
     }
 })
 
